@@ -1,75 +1,326 @@
-*
-{
-  margin: 0px;
-  padding: 0px;
+:root {
+  --bg: #ffcf00;
 }
 
-.navigation_blank
-{
-  margin-left: 77%;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
 
-.navstyle
-{
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-  padding-top: 7.5px;
-  padding-bottom: 7.5px;
-  color: black;
   text-decoration: none;
-  text-align: center; 
 }
 
-#welcome_div
-{
-  background-image: url("assets/foto_toko.jpg");
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: 100%;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-#welcome_cover
-{
-  background-color: rgba(0,0,0,0.5);
-  width: 100%;
-  height: 100%;
-  padding-bottom: 22%;
-}
-
-#navigation_div
-{
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding-top: 15px;
-  padding-bottom: 15px;
-  
-}
-
-.sun_atk
-{
-  text-align: center;
-  margin: auto;
-  margin-top: 15%;
+nav {
+  z-index: 100;
   color: white;
-  font-weight: bold;
-  font-size: 250%;
-}
-
-.jasa
-{
   text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  position: fixed;
+  border-bottom: 1px solid #b1b1b1;
+  line-height: 60px;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  padding: 1rem;
+  background-color: black;
+  opacity: 60%;
+  /* buat transisi efek di navbar */
 }
 
-.title_jasa
-{
-  font-size: 200%;
-  
+nav.putih {
+  background-color: white;
+}
+nav .layar-dalam {
+  margin: 0 5rem;
+}
+nav .logo {
+  float: left;
+  position: relative;
+  line-height: 55px;
+  color: black;
+  text-align: center;
+  font-size: 2rem;
 }
 
-.table_jasa
-{
+nav .logo img {
+  width: 100px;
+  height: 80px;
+  vertical-align: middle;
+}
+
+nav .menu {
+  float: right;
+  height: 60px;
+  max-width: 600px;
+}
+nav .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav .menu ul li {
+  list-style-type: none;
+  float: left;
+  line-height: 60px;
+}
+
+nav ul li a {
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: var(--bg);
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+main {
+  width: 100%;
+}
+.profile {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("assets/foto_toko.jpg");
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profile .content {
+  padding: 1.4rem;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.profile .content h1 {
+  font-size: 2em;
+  color: white;
+}
+.profile .content h1:hover {
+  text-shadow: rgb(234, 234, 212) -3px 0;
+}
+.profile .content p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: bold;
+  color: white;
+}
+
+.profile .content button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin-top: 2rem;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--bg);
+  color: ghostwhite;
+}
+
+.profile .content button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.profile .content button:hover span {
+  color: black;
+}
+
+.profile .content button::before,
+.profile .content button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.profile .content button::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.profile .content button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.about,
+.aboutus {
+  padding: 2rem 6rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.about h2::after {
+  content: "";
+  border-bottom: 5px solid #c86b85;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+
+.about .card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about .card-layout .card-layout-item {
+  background-color: rgb(251, 242, 225);
+  text-align: center;
+  height: 150px;
+  width: 300px;
+  margin: 5px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.about .card-layout .card-layout-item:hover {
+  font-weight: bold;
+  background-color: rgb(245, 233, 209);
+}
+
+.about .card-layout .card-layout-item p {
+  margin: 4rem;
+}
+
+.aboutus h2 {
+  text-align: center;
+}
+
+.aboutus h2::after {
+  content: "";
+  border-bottom: 5px solid #c86b85;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+
+.aboutus .aboutusmid {
+  display: flex;
   margin: auto;
+  padding: auto;
+}
+
+.aboutus .aboutusmid p {
+  width: 100%;
+  margin: auto 0;
+}
+
+.aboutus .aboutusmid .container img {
+  width: 100%;
+}
+.aboutus .container {
+  width: 100%;
+  overflow: hidden;
+  border: 10px solid rgb(237, 231, 221);
+}
+
+.aboutus .container .wrapper {
+  width: auto;
+  display: flex;
+  animation: slide 16s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-75%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+footer {
+  margin-top: 250px;
+  padding: 50px;
+  background-color: #343a40;
+  color: #fff;
+}
+footer .layar-dalam {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .layar-dalam div {
+  width: 20%;
+}
+footer .layar-dalam h5 {
+  margin-top: 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+footer .layar-dalam span {
+  font-size: 10px;
+}
+
+footer .layar-dalam a {
+  color: white;
+  font-size: 10px;
+}
+footer .layar-dalam .alamat span {
+  text-align: center;
+}
+footer .copyright {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #666;
+  text-align: center;
 }

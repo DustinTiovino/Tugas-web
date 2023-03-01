@@ -299,7 +299,8 @@ footer .layar-dalam {
   justify-content: space-between;
 }
 footer .layar-dalam div {
-  width: 20%;
+  width: auto;
+  /* awalnya 20% aku coba ubah biar footernya cukup untuk peta */
 }
 footer .layar-dalam h5 {
   margin-top: 0px;
@@ -324,3 +325,8 @@ footer .copyright {
   border-top: 1px solid #666;
   text-align: center;
 }
+
+/* iframe{
+  margin: auto;
+  padding: 10px;
+} */

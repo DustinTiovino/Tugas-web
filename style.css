@@ -46,7 +46,6 @@ nav .logo {
   font-size: 2rem;
 }
 
-
 nav .logo img {
   width: 100px;
   height: 80px;
@@ -301,6 +300,7 @@ footer .layar-dalam {
 }
 footer .layar-dalam div {
   width: auto;
+  /* awalnya 20% aku coba ubah biar footernya cukup untuk peta */
 }
 footer .layar-dalam h5 {
   margin-top: 0px;
@@ -326,3 +326,7 @@ footer .copyright {
   text-align: center;
 }
 
+/* iframe{
+  margin: auto;
+  padding: 10px;
+} */

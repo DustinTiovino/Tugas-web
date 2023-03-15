@@ -101,7 +101,7 @@ main {
 .profile {
   min-height: 100vh;
   display: flex;
-  background-image: url("assets/foto_toko.jpg");
+  background-image: url("assets/toko-edit.png");
   background-repeat: no-repeat;
   align-items: center;
   background-size: cover;

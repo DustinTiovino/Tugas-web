@@ -209,7 +209,7 @@ img {
   justify-content: center;
 }
 
-.about .card-layout .card-layout-item {
+.about .card-layout .card-layout-item{
   background-color: rgb(251, 242, 225);
   text-align: center;
   height: 150px;
@@ -219,12 +219,12 @@ img {
   border-radius: 10px;
 }
 
-.about .card-layout .card-layout-item:hover {
+.about .card-layout .card-layout-item:hover{
   font-weight: bold;
   background-color: rgb(245, 233, 209);
 }
 
-.about .card-layout .card-layout-item p {
+.about .card-layout .card-layout-item{
   margin: 4rem;
 }
 
@@ -330,3 +330,7 @@ footer .copyright {
   margin: auto;
   padding: 10px;
 } */
+
+.fotocopy_detail, .cuciFoto_detail,.editFoto_detail,.scan_detail,.print_detail,.laminating_detail{
+  display: none;
+}

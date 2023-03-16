@@ -40,7 +40,9 @@
         <main class="content">
           <h1>Toko Perlengkapan</h1>
           <p>Selamat datang</p>
-          <a href="https://www.tokopedia.com/sunstationeries" target="_blank"><button><span>Lihat</span></button></a>
+          <a href="https://www.tokopedia.com/sunstationeries" target="_blank"
+            ><button><span>Lihat</span></button></a
+          >
         </main>
       </section>
       <!-- <img src="assets/foto toko.jpg" alt="SUN ATK" /> -->
@@ -48,50 +50,122 @@
       <section class="about" id="about">
         <h2>Layanan yang Ditawarkan</h2>
         <div class="card-layout">
-            <div>
-                <input type="button" id="fotocopy_buka" class="fotocopy_buka card-layout-item" value="fotocopy" onclick="fotocopyOpen()">
-                <p id="fotocopy_detail" class="fotocopy_detail">
-                  1. Copy warna (ukuran A4, F4)<br>
-                  2. Copy hitam putih (ukuran A4, F4, A3)<br>
-                  <input type="button" id="fotocopy_tutup" class="fotocopy_tutup" value="tutup" onclick="fotocopyClose()">
-                </p>
-            </div>
           <div>
-            <input type="button" id="cuciFoto_buka" class="cuciFoto_buka card-layout-item" value="Cuci Foto dan Pas Foto" onclick="cuciFotoOpen()">
-                <p id="cuciFoto_detail" class="cuciFoto_detail">
-                  1. cuci foto ukuran 2x3 3x4 4x6 2r 3r<br>
-                  2. pasfoto + cuci foto ukuran 2x3 3x4 4x6<br>
-                  <input type="button" id="cuciFoto_tutup" class="cuciFoto_tutup" value="tutup" onclick="cuciFotoClose()">
-                </p>
+            <input
+              type="button"
+              id="fotocopy_buka"
+              class="fotocopy_buka card-layout-item"
+              value="fotocopy"
+              onclick="fotocopyOpen()"
+            />
+            <p id="fotocopy_detail" class="fotocopy_detail">
+              1. Copy warna (ukuran A4, F4)<br />
+              2. Copy hitam putih (ukuran A4, F4, A3)<br />
+              <input
+                type="button"
+                id="fotocopy_tutup"
+                class="fotocopy_tutup"
+                value="tutup"
+                onclick="fotocopyClose()"
+              />
+            </p>
           </div>
           <div>
-            <input type="button" id="editFoto_buka" class="editFoto_buka card-layout-item" value="Jasa Edit Foto" onclick="editFotoOpen()">
-                <p id="editFoto_detail" class="editFoto_detail">
-                  Ganti warna latar<br>
-                  <input type="button" id="editFoto_tutup" class="editFoto_tutup" value="tutup" onclick="editFotoClose()">
-                </p>
+            <input
+              type="button"
+              id="cuciFoto_buka"
+              class="cuciFoto_buka card-layout-item"
+              value="Cuci Foto dan Pas Foto"
+              onclick="cuciFotoOpen()"
+            />
+            <p id="cuciFoto_detail" class="cuciFoto_detail">
+              1. cuci foto ukuran 2x3 3x4 4x6 2r 3r<br />
+              2. pasfoto + cuci foto ukuran 2x3 3x4 4x6<br />
+              <input
+                type="button"
+                id="cuciFoto_tutup"
+                class="cuciFoto_tutup"
+                value="tutup"
+                onclick="cuciFotoClose()"
+              />
+            </p>
           </div>
           <div>
-            <input type="button" id="scan_buka" class="scan_buka card-layout-item" value="Scan" onclick="scanOpen()">
-                <p id="scan_detail" class="scan_detail">
-                  1. ubah dokumen ke pdf<br>
-                  2. ubah dokumen ke jpg<br>
-                  <input type="button" id="scan_tutup" class="scan_tutup" value="tutup" onclick="scanClose()">
-                </p>
+            <input
+              type="button"
+              id="editFoto_buka"
+              class="editFoto_buka card-layout-item"
+              value="Jasa Edit Foto"
+              onclick="editFotoOpen()"
+            />
+            <p id="editFoto_detail" class="editFoto_detail">
+              Ganti warna latar<br />
+              <input
+                type="button"
+                id="editFoto_tutup"
+                class="editFoto_tutup"
+                value="tutup"
+                onclick="editFotoClose()"
+              />
+            </p>
           </div>
           <div>
-            <input type="button" id="print_buka" class="print_buka card-layout-item" value="Print" onclick="printOpen()">
-                <p id="print_detail" class="print_detail">
-                  print warna dan hitam putih (ukuran A4, F4, Quarto)<br>
-                  <input type="button" id="print_tutup" class="print_tutup" value="tutup" onclick="printClose()">
-                </p>
+            <input
+              type="button"
+              id="scan_buka"
+              class="scan_buka card-layout-item"
+              value="Scan"
+              onclick="scanOpen()"
+            />
+            <p id="scan_detail" class="scan_detail">
+              1. ubah dokumen ke pdf<br />
+              2. ubah dokumen ke jpg<br />
+              <input
+                type="button"
+                id="scan_tutup"
+                class="scan_tutup"
+                value="tutup"
+                onclick="scanClose()"
+              />
+            </p>
           </div>
           <div>
-            <input type="button" id="laminating_buka" class="laminating_buka card-layout-item" value="Laminating" onclick="laminatingOpen()">
-                <p id="laminating_detail" class="laminating_detail">
-                  laminating dokumen (ukuran kertas hingga A3)<br>
-                  <input type="button" id="laminating_tutup" class="laminating_tutup" value="tutup" onclick="laminatingClose()">
-                </p>
+            <input
+              type="button"
+              id="print_buka"
+              class="print_buka card-layout-item"
+              value="Print"
+              onclick="printOpen()"
+            />
+            <p id="print_detail" class="print_detail">
+              print warna dan hitam putih (ukuran A4, F4, Quarto)<br />
+              <input
+                type="button"
+                id="print_tutup"
+                class="print_tutup"
+                value="tutup"
+                onclick="printClose()"
+              />
+            </p>
+          </div>
+          <div>
+            <input
+              type="button"
+              id="laminating_buka"
+              class="laminating_buka card-layout-item"
+              value="Laminating"
+              onclick="laminatingOpen()"
+            />
+            <p id="laminating_detail" class="laminating_detail">
+              laminating dokumen (ukuran kertas hingga A3)<br />
+              <input
+                type="button"
+                id="laminating_tutup"
+                class="laminating_tutup"
+                value="tutup"
+                onclick="laminatingClose()"
+              />
+            </p>
           </div>
         </div>
       </section>
@@ -100,15 +174,20 @@
     <div class="aboutus" id="aboutus">
       <h2>About Us</h2>
       <div class="aboutusmid">
-        <p>
-          SUN ATK adalah sebuah toko yang menyediakan layanan dan juga barang
-          berupa keperluan Alat Tulis Kantor (ATK), toko ini mulai berdiri sejak
-          awal tahun 2004 yang masih ada hingga saat ini. Pada mulanya toko ini
-          hanya memberikan pelayanan berupa barang dan jasa yang berkaitan
-          dengan keperluan kantor, namun seiring waktu layanan yang diberikan
-          pun bertambah seperti layanan isi ulang pulsa, kuota dan token
-          listrik.
-        </p>
+        <div class="atasabout">
+          <p>
+            SUN ATK adalah sebuah toko yang menyediakan layanan dan juga barang
+            berupa keperluan Alat Tulis Kantor (ATK), toko ini mulai berdiri
+            sejak awal tahun 2004 yang masih ada hingga saat ini. Pada mulanya
+            toko ini hanya memberikan pelayanan berupa barang dan jasa yang
+            berkaitan dengan keperluan kantor, namun seiring waktu layanan yang
+            diberikan pun bertambah seperti layanan isi ulang pulsa, kuota dan
+            token listrik.
+          </p>
+
+          <button><span>Lihat</span></button>
+        </div>
+
         <div class="container">
           <div class="wrapper">
             <img src="assets/foto_toko.jpg" />
@@ -124,8 +203,11 @@
         <div class="layar-dalam">
           <div>
             <h5>Contact Us</h5>
-            <a href="https://wa.me/+6289659317779" style="font-size: 17px"
-              >+6289659317779</a
+            <a
+              href="https://wa.me/+6289659317779"
+              target="_blank"
+              style="font-size: 17px; text-decoration: underline"
+              >Hubungi Kami</a
             >
             <br />
             <!-- <a

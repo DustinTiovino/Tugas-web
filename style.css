@@ -390,42 +390,49 @@ footer .copyright {
 .fotocopy_buka {
   background: url("/assets/icons/copier.png");
   background-repeat: no-repeat;
-  background-size: 30px;
+  background-size: 100px;
+  justify-content: center;
+  background-position: center;
 }
 
 .cuciFoto_buka {
-  background: url("assets/icons/pasfoto.png");
+  background: url("https://static.thenounproject.com/png/5584696-200.png");
   background-repeat: no-repeat;
   justify-content: center;
-  background-size: 30px;
+  background-size: 100px;
+  background-position: center;
 }
 
 .editFoto_buka {
   background: url("assets/icons/photo-editor.png");
   background-repeat: no-repeat;
   justify-content: center;
-  background-size: 30px;
+  background-size: 100px;
+  background-position: center;
 }
 
 .scan_buka {
-  background: url("assets/icons/scanner.png");
+  background: url("https://img.icons8.com/ios/200w/rescan-document.png");
   background-repeat: no-repeat;
   justify-content: center;
-  background-size: 30px;
+  background-size: 100px;
+  background-position: center;
 }
 
 .print_buka {
   background: url("assets/icons/print.png");
   background-repeat: no-repeat;
   justify-content: center;
-  background-size: 30px;
+  background-size: 100px;
+  background-position: center;
 }
 
 .laminating_buka {
   background: url("assets/icons/laminator.png");
   background-repeat: no-repeat;
   justify-content: center;
-  background-size: 30px;
+  background-size: 100px;
+  background-position: center;
 }
 
 .fotocopy_detail,
@@ -450,11 +457,11 @@ footer .copyright {
 .print_tutup,
 .laminating_tutup {
   text-align: center;
-  margin: 0 auto;
-  display: block;
-  padding: 20px;
+  margin: auto;
+  padding: 20px 133px;
   border-radius: 5px;
   cursor: pointer;
+  display: block;
 }
 
 .fotocopy_tutup:hover,

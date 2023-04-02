@@ -8,7 +8,6 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-
   text-decoration: none;
 }
 
@@ -71,7 +70,7 @@ nav .menu ul li {
   line-height: 60px;
 }
 
-nav ul li a {
+nav .menu ul li a {
   color: black;
   text-align: center;
   padding: 0 20px;
@@ -79,7 +78,7 @@ nav ul li a {
   display: inline-block;
 }
 
-nav ul li a:hover {
+nav .menu ul li a:hover {
   color: var(--bg);
 }
 
@@ -109,7 +108,10 @@ main {
   background-position: center;
   position: relative;
 }
-
+.scroll {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 .content {
   padding: 1.4rem;
   padding-top: 20%;
@@ -189,7 +191,7 @@ img {
 
 .about,
 .aboutus {
-  padding: 2rem 6rem;
+  padding: 8rem 6rem;
 }
 
 .about h2 {

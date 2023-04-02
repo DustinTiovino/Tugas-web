@@ -101,7 +101,7 @@ main {
 .profile {
   min-height: 100vh;
   display: flex;
-  background-image: url("assets/toko-edit.png");
+  background-image: url("../images/toko-edit.png");
   background-repeat: no-repeat;
   align-items: center;
   background-size: cover;
@@ -390,7 +390,7 @@ footer .copyright {
 } */
 
 .fotocopy_buka {
-  background: url("/assets/icons/copier.png");
+  background: url("../images/icons/copier.png");
   background-repeat: no-repeat;
   background-size: 100px;
   justify-content: center;
@@ -406,7 +406,7 @@ footer .copyright {
 }
 
 .editFoto_buka {
-  background: url("assets/icons/photo-editor.png");
+  background: url("../images/icons/photo-editor.png");
   background-repeat: no-repeat;
   justify-content: center;
   background-size: 100px;
@@ -422,7 +422,7 @@ footer .copyright {
 }
 
 .print_buka {
-  background: url("assets/icons/print.png");
+  background: url("../images/icons/print.png");
   background-repeat: no-repeat;
   justify-content: center;
   background-size: 100px;
@@ -430,7 +430,7 @@ footer .copyright {
 }
 
 .laminating_buka {
-  background: url("assets/icons/laminator.png");
+  background: url("../images/icons/laminator.png");
   background-repeat: no-repeat;
   justify-content: center;
   background-size: 100px;

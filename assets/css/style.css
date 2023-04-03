@@ -108,8 +108,8 @@ main {
   background-position: center;
   position: relative;
 }
-.scroll {
-  overflow-y: scroll;
+html,
+* {
   scroll-behavior: smooth;
 }
 .content {

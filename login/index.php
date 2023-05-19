@@ -6,7 +6,7 @@
     <body>
         <?php
 
-include 'connection.php';
+include './config/connection.php';
 session_start();
 if(isset($_SESSION['login'])){
     header("location:adminPage.php");
@@ -38,7 +38,7 @@ if(isset($_POST['login'])){
     else {
             echo "<script>
             alert('Username atau Password salah');
-            window.location = 'login.php';
+            window.location = 'index.php';
             </script>";
     }
 }

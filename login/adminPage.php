@@ -1,5 +1,5 @@
 <?php
-	include "connection.php";
+	include "./config/connection.php";
 	$sql = "SELECT* from tb_barang";
 	$query = mysqli_query($conn,$sql);
 ?>
@@ -8,7 +8,7 @@
 session_start();
 
 if(!isset($_SESSION['login'])){
-	header("location:login.php");
+	header("location:index.php");
 	exit;
 }
 ?>
@@ -21,7 +21,7 @@ if(!isset($_SESSION['login'])){
 	<a href="logout.php">LOGOUT</a>
 </head>
 <body>
-<form method="POST" action="saveAdmin.php">
+<form method="POST" action="./config/saveAdmin.php">
 	<table> 
 		<tr>
 			<td>No Barang</td>
@@ -92,7 +92,7 @@ if(!isset($_SESSION['login'])){
 </body>
 <script>
 	function func_delete(no_barang){
-		location.href = "saveAdmin.php?no_barang="+no_barang+"&submit_button=delete";
+		location.href = "./config/saveAdmin.php?no_barang="+no_barang+"&submit_button=delete";
 	}
 
 	function func_edit(no_barang,nama_barang,jumlah,harga_barang){

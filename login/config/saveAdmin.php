@@ -62,5 +62,5 @@ $submit_button = $_REQUEST['submit_button'];
     	$query = mysqli_query($conn,$sql);
 	}
 
-header('location:adminPage.php');
+header('location:../adminPage.php');
 ?>

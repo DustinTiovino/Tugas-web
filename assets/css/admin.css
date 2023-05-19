@@ -1,0 +1,59 @@
+.table {
+  border: 1px black solid;
+  box-shadow: 3px 3px grey;
+  border-radius: 5px;
+  width: 30%;
+  height: 30%;
+  padding: 1px 0px 20px 20px;
+  margin: 80px 50px;
+  background-color: white;
+}
+
+.login {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin-top: 2rem;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--bg);
+  color: black;
+}
+
+.login {
+  background-color: rgb(255, 251, 4);
+  border: 1px;
+}
+
+.login:hover {
+  background-color: rgba(208, 225, 24, 0.834);
+  border: 1px;
+}
+
+.username {
+  border: 2px solid grey;
+  padding: 10px 10px;
+  border-radius: 6px;
+}
+.password {
+  border: 2px solid grey;
+  padding: 10px 10px;
+  border-radius: 6px;
+}
+
+.username:hover {
+  border: 2px solid black;
+  transition: 2ms;
+}
+.password:hover {
+  border: 2px solid black;
+  transition: 2ms;
+}

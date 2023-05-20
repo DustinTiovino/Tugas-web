@@ -5,7 +5,7 @@
   width: 30%;
   height: 30%;
   padding: 1px 0px 20px 20px;
-  margin: 80px 50px;
+  margin: 10% 5%;
   background-color: white;
 }
 
@@ -31,6 +31,7 @@
 .login {
   background-color: rgb(255, 251, 4);
   border: 1px;
+
 }
 
 .login:hover {

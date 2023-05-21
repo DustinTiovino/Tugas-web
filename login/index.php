@@ -47,7 +47,7 @@ if(isset($_POST['login'])){
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
             <table class="table">
                 <tr>
-                    <td colspan="2"><h2>Selamat Datang</h2></td>
+                    <td colspan="2"><h2>Welcome!</h2></td>
                 </tr>
                 <tr>
                     <td>Username</td>

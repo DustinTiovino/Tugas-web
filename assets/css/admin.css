@@ -3,10 +3,10 @@
   box-shadow: 3px 3px grey;
   border-radius: 5px;
   width: 30%;
-  height: 30%;
+  height: 40%;
   padding: 1px 0px 20px 20px;
-  margin: 10% 5%;
-  background-color: white;
+  margin: 8% auto;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .login {
@@ -26,16 +26,16 @@
   overflow: hidden;
   background: var(--bg);
   color: black;
+  width: 95%;
 }
 
 .login {
-  background-color: rgb(255, 251, 4);
+  background-color: rgb(243, 240, 79);
   border: 1px;
-
 }
 
 .login:hover {
-  background-color: rgba(208, 225, 24, 0.834);
+  background-color: rgba(218, 231, 69, 0.834);
   border: 1px;
 }
 
@@ -43,11 +43,14 @@
   border: 2px solid grey;
   padding: 10px 10px;
   border-radius: 6px;
+  width: 85%;
 }
+
 .password {
   border: 2px solid grey;
   padding: 10px 10px;
   border-radius: 6px;
+  width: 85%;
 }
 
 .username:hover {
@@ -57,4 +60,17 @@
 .password:hover {
   border: 2px solid black;
   transition: 2ms;
+}
+
+h2 {
+  text-align: center;
+  padding-right: 20px;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
 }

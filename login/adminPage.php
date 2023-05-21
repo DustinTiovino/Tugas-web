@@ -15,7 +15,7 @@ if(!isset($_SESSION['login'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="./assets/css/admin.css">
+	<link rel="stylesheet" href="../assets/css/items.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CRUD</title>
@@ -61,7 +61,7 @@ if(!isset($_SESSION['login'])){
 			<td>nama barang</td>
 			<td>jumlah</td>
 			<td>harga barang</td>
-			<td>Action</td>
+			<td colspan="2">Action</td>
 		</tr>
 		
 		<?php 

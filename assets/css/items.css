@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.logout {
+  display: block;
+  color: blue;
+  width: 100%;
+  text-align: end;
+}
+
+.logout:hover {
+  color: rgb(106, 26, 180);
+  transition: 2ms;
+}
+
+.items {
+  border: 1px black solid;
+  width: fit-content;
+  height: fit-content;
+}
+
+.no {
+  visibility: collapse;
+}
+
+.nama {
+  border: 2x solid grey;
+  border-radius: 6px;
+}
+
+.nama:hover {
+  border: 2px solid black;
+  transition: 2ms;
+}
+
+.jumlah {
+  border: 2px solid grey;
+  border-radius: 6px;
+}
+
+.jumlah:hover {
+  border: 2px solid black;
+  transition: 2ms;
+}
+
+.harga {
+  border: 2px solid grey;
+  border-radius: 6px;
+}
+
+.harga:hover {
+  border: 2px solid black;
+  transition: 2ms;
+}
+
+.tambah {
+  color: black;
+  background-color: rgb(241, 241, 5);
+  border: 0px;
+  border-radius: 8px;
+  width: 50%;
+  margin: auto 25%;
+}
+
+.tambah:hover {
+  background-color: rgb(217, 219, 70);
+  transition: 2ms;
+}
+
+/* bagian tabel isi */
+
+.no_barang {
+  text-align: center;
+}
+
+.nama_barang {
+  text-align: left;
+}
+
+.jumlah_barang {
+  text-align: center;
+  width: 85px;
+}
+
+.harga_barang {
+  text-align: center;
+  width: 90px;
+}
+
+.action {
+  text-align: center;
+}
+
+
+/* HEADER */
+.header {
+  background-color: yellow;
+  text-align: center;
+}
+
+.header td{
+    padding: 0 1rem;
+}

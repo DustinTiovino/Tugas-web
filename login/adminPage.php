@@ -15,50 +15,48 @@ if(!isset($_SESSION['login'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="../assets/css/items.css">
+	<link rel="stylesheet" href="../assets/css/items.css?v=<?php echo time(); ?>">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CRUD</title>
-	<a href="logout.php">LOGOUT</a>
+	<a href="logout.php" class="logout">LOGOUT</a>
 </head>
 <body>
 <form method="POST" action="./config/saveAdmin.php">
-	<table> 
-		<tr>
+	<table class="items"> 
+		<tr class="no">
 			<td>No Barang</td>
 			<td>:</td>
-			<td><input type="text" name="no_barang" id="no_barang" value="" readonly></td>
+			<td><input type="text" name="no_barang"  id="no_barang" value="" readonly></td>
 		</tr>
 
 		<tr>
 			<td>Nama Barang</td>
 			<td>:</td>
-			<td><input type="text" name="nama_barang" id="nama_barang" value=""></td>
+			<td><input type="text" name="nama_barang" class="nama" id="nama_barang" value="" ></td>
 		</tr>
 
 		<tr>
 			<td>Jumlah</td>
 			<td>:</td>
-			<td><input type="text" name="jumlah" id="jumlah" value=""></td>
+			<td><input type="text" name="jumlah" class="jumlah" id="jumlah" value=""></td>
 		</tr>
 
 		<tr>
 			<td>Harga Barang</td>
 			<td>:</td>
-			<td><input type="text" name="harga_barang" id="harga_barang" value=""></td>
+			<td><input type="text" name="harga_barang" class="harga" id="harga_barang" value=""></td>
 		</tr>
 
 		<tr>
-			<td></td>
-			<td></td>
-			<td><input type="submit" name="submit_button" id="submit_button" value="tambah"></td>
+			<td colspan="3"><input type="submit" name="submit_button" class="tambah" id="submit_button" value="tambah"></td>
 		</tr>
 	</table>
-
-	<table border="1">
-		<tr>
-			<td>no barang</td>
-			<td>nama barang</td>
+<br>
+	<table border="1" class="isi">
+		<tr class="header">
+			<td width="">no barang</td>
+			<td> nama barang</td>
 			<td>jumlah</td>
 			<td>harga barang</td>
 			<td colspan="2">Action</td>
@@ -75,11 +73,11 @@ if(!isset($_SESSION['login'])){
 		?>
 
 		<tr>
-			<td><?php echo $no_barang; ?></td>
-			<td><?php echo $nama_barang; ?></td>
-			<td><?php echo $jumlah; ?></td>
-			<td><?php echo $harga_barang; ?></td>
-			<td><input type="button" name="delete_button" id="delete_button" value="delete" onclick="func_delete(<?php echo "{$no_barang}"?>)"></td>
+			<td class="no_barang"><?php echo $no_barang; ?></td>
+			<td class="nama_barang"><?php echo $nama_barang; ?></td>
+			<td class="jumlah_barang"><?php echo $jumlah; ?></td>
+			<td class="harga_barang"><?php echo $harga_barang; ?></td>
+			<td class="action"><input type="button" name="delete_button" id="delete_button" value="delete" onclick="func_delete(<?php echo "{$no_barang}"?>)"></td>
 					<td><input type="button" name="edit" id="edit" value="edit" onclick="func_edit(<?php echo"'$no_barang','$nama_barang','$jumlah','$harga_barang'"?>)"></td>
 			</tr>
 		<?php 

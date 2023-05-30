@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bg: #ffcf00;
 }
 
@@ -28,7 +28,7 @@ nav {
   background-color: #f6ebbd;
   opacity: 80%;
   font-weight: bold;
-  /* buat transisi efek di navbar */
+ 
 }
 
 nav.putih {
@@ -324,6 +324,14 @@ img {
   animation: slide 16s infinite;
 }
 
+.product {
+  border: 1px solid #000;
+  width: 200px;
+  color: orange;
+  float: left;
+  display: inline;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -358,7 +366,7 @@ footer .layar-dalam {
 }
 footer .layar-dalam div {
   width: auto;
-  /* awalnya 20% aku coba ubah biar footernya cukup untuk peta */
+
 }
 footer .layar-dalam h5 {
   margin-top: 0px;
@@ -383,11 +391,6 @@ footer .copyright {
   border-top: 1px solid #666;
   text-align: center;
 }
-
-/* iframe{
-  margin: auto;
-  padding: 10px;
-} */
 
 .fotocopy_buka {
   background: url("../images/icons/copier.png");
@@ -481,6 +484,5 @@ footer .copyright {
   width: 100wh;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-  /* background-color: red; */
   z-index: 10;
-}
+} */

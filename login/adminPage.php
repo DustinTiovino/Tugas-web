@@ -49,16 +49,16 @@ if(!isset($_SESSION['login'])){
 		</tr>
 
 		<tr>
-			<td colspan="3"><input type="submit" name="submit_button" class="tambah" id="submit_button" value="tambah"></td>
+			<td colspan="3"><input type="submit" name="submit_button" class="tambah" id="submit_button" value="Tambah"></td>
 		</tr>
 	</table>
 <br>
 	<table border="1" class="isi">
 		<tr class="header">
-			<td width="">no barang</td>
-			<td> nama barang</td>
-			<td>jumlah</td>
-			<td>harga barang</td>
+			<td width="">No Barang</td>
+			<td> Nama Barang</td>
+			<td>Jumlah</td>
+			<td>Harga Barang</td>
 			<td colspan="2">Action</td>
 		</tr>
 		

@@ -17,9 +17,15 @@ body {
 }
 
 .items {
-  border: 1px black solid;
-  width: fit-content;
-  height: fit-content;
+  /* border: 1px black solid; */
+  padding: 20px;
+  background-color: lightblue;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .no {
@@ -58,22 +64,30 @@ body {
 
 .tambah {
   color: black;
-  background-color: rgb(241, 241, 5);
+  background-color: yellow;
   border: 0px;
   border-radius: 8px;
   width: 50%;
+  padding: 5px;
   margin: auto 25%;
 }
 
 .tambah:hover {
-  background-color: rgb(217, 219, 70);
+  background-color: rgb(241, 241, 5);
   transition: 2ms;
 }
 
 /* bagian tabel isi */
+.isi {
+  background-color: lightblue;
+  height: 80%;
+  width: 80%;
+  margin: auto;
+}
 
 .no_barang {
   text-align: center;
+  width: 10%;
 }
 
 .nama_barang {
@@ -82,18 +96,17 @@ body {
 
 .jumlah_barang {
   text-align: center;
-  width: 85px;
+  width: 10%;
 }
 
 .harga_barang {
   text-align: center;
-  width: 90px;
+  width: 20%;
 }
 
 .action {
   text-align: center;
 }
-
 
 /* HEADER */
 .header {
@@ -101,6 +114,6 @@ body {
   text-align: center;
 }
 
-.header td{
-    padding: 0 1rem;
+.header td {
+  padding: 0 1rem;
 }

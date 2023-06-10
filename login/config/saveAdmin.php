@@ -3,11 +3,12 @@ include 'connection.php';
 $no_barang = $_REQUEST['no_barang'];
 $submit_button = $_REQUEST['submit_button'];
 
-	if ($submit_button == "tambah") {
+	if ($submit_button == "Tambah") {
 		$nama_barang = $_POST['nama_barang'];
 		$jumlah = $_POST['jumlah'];
 		$harga_barang = $_POST['harga_barang'];
-		$sql="INSERT into tb_barang(nama_barang,jumlah,harga_barang) values('$nama_barang','$jumlah','$harga_barang')";	
+		$gambar = $_POST['gambar'];
+		$sql="INSERT into tb_barang(nama_barang,jumlah,harga_barang,gambar) values('$nama_barang','$jumlah','$harga_barang','$gambar')";	
 		$query = mysqli_query($conn,$sql);
 
 
@@ -58,7 +59,8 @@ $submit_button = $_REQUEST['submit_button'];
 		$nama_barang = $_POST['nama_barang'];
 		$jumlah = $_POST['jumlah'];
 		$harga_barang = $_POST['harga_barang'];
-    	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang' where no_barang = '$no_barang'";
+		$gambar = $_POST['gambar'];
+    	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang',gambar = '$gambar' where no_barang = '$no_barang'";
     	$query = mysqli_query($conn,$sql);
 	}
 

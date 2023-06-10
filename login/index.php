@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <link rel="stylesheet" href="../assets/css/admin.css">
-        <title>Login</title>
-    </head>
-    <body>
-        <?php
+<?php
+session_start();
 
 include './config/connection.php';
-session_start();
 if(isset($_SESSION['login'])){
     header("location:adminPage.php");
     exit;
@@ -20,7 +13,7 @@ if(isset($_POST['login'])){
     $sql = "SELECT * FROM akun WHERE username = '$username' && password = '$password'";
     $query = mysqli_query($conn,$sql);
 
-    if (mysqli_num_rows($query) === 1) {
+    if (mysqli_num_rows($query) > 0) {
         $data = mysqli_fetch_assoc($query);
         $_SESSION['login'] = true;
         header('location:adminPage.php');
@@ -44,6 +37,14 @@ if(isset($_POST['login'])){
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+        <title>Login</title>
+    </head>
+    <body>
+
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
             <table class="table">
                 <tr>
@@ -64,6 +65,9 @@ if(isset($_POST['login'])){
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" name="login" value="login" class="login"></td>
+                </tr>
+                <tr>
+                    <td><a href="../" style="text-decoration: none;">Kembali Ke Halaman User</a></td>
                 </tr>
             </table>
         </form>

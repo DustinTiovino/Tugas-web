@@ -29,7 +29,7 @@ body {
 }
 
 .no {
-  visibility: collapse;
+   visibility: collapse;
 }
 
 .nama {
@@ -87,24 +87,41 @@ body {
 
 .no_barang {
   text-align: center;
-  width: 10%;
+  width: 1%;
 }
 
 .nama_barang {
   text-align: left;
+  width: 40%;
+  padding-left: 5px;
 }
 
 .jumlah_barang {
   text-align: center;
-  width: 10%;
+  width: 1%;
 }
 
 .harga_barang {
-  text-align: center;
-  width: 20%;
+  text-align: left;
+  width: 18%;
 }
 
-.action {
+.gambar {
+  text-align: center;
+}
+
+.isi_harga_barang {
+  width: 50%;
+  margin: auto;
+}
+
+.action1 {
+  width: 6%;
+  text-align: center;
+}
+
+.action2 {
+  width: 4%;
   text-align: center;
 }
 

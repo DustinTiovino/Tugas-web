@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +16,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-     
 
     <title>SUN ATK HOMEPAGE</title>
-
-    <?php
-      include "./login/config/connection.php";
-    ?>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -45,7 +39,7 @@
       </div>
     </nav>
     <div class="scroll">
-      
+      <main>
         <section class="profile" id="profile">
           <main class="content profile_layer">
             <h1>Toko Perlengkapan</h1>
@@ -58,27 +52,7 @@
         <!-- <img src="assets/foto toko.jpg" alt="SUN ATK" /> -->
 
         <section class="about" id="about">
-
-
           <h2>Layanan yang Ditawarkan</h2>
-          <?php
-          $sql = "select * from tb_barang";
-          $query = mysqli_query($conn, $sql);
-          while($result = mysqli_fetch_array($query)){
-            $nama_barang = $result['nama_barang'];
-            $jumlah = $result['jumlah'];
-            $harga_barang = $result['harga_barang'];
-            ?>
-
-          <div class="product">
-            <img width="100" height="200" src="assets/images/">
-            <?php echo $nama_barang;?>
-            <div class="harga_barang"><?php echo $harga_barang;?></div>dd
-          </div>
-          <?php
-          }
-          ?>
-          
           <div class="card-layout">
             <div>
               <input
@@ -206,7 +180,7 @@
             </div>
           </div>
         </section>
-     
+      </main>
 
       <div class="aboutus" id="aboutus">
         <h2>About Us</h2>

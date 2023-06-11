@@ -182,6 +182,14 @@
         </section>
       </main>
 
+      <div class="card_luar">
+            <div class="card">
+                <div class="card_image"></div>
+                <div class="card_name">Judul</div>
+                <div class="card_price">Harga</div>
+            </div>
+        </div>
+        
       <div class="aboutus" id="aboutus">
         <h2>About Us</h2>
         <div class="aboutusmid">

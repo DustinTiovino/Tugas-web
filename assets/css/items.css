@@ -134,3 +134,8 @@ body {
 .header td {
   padding: 0 1rem;
 }
+
+a:hover {
+   cursor: pointer;
+   background-color: yellow;
+}

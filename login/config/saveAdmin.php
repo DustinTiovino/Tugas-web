@@ -60,8 +60,14 @@ $submit_button = $_REQUEST['submit_button'];
 		$jumlah = $_POST['jumlah'];
 		$harga_barang = $_POST['harga_barang'];
 		$gambar = $_POST['gambar'];
+
+		if($gambar != "") {
     	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang',gambar = '$gambar' where no_barang = '$no_barang'";
     	$query = mysqli_query($conn,$sql);
+    	}else{
+    	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang' where no_barang = '$no_barang'";
+    	$query = mysqli_query($conn,$sql);
+    	}
 	}
 
 header('location:../adminPage.php');

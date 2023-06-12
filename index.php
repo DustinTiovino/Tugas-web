@@ -1,9 +1,21 @@
+<?php
+session_start();
+  include "./login/config/connection.php";
+  $sql = "SELECT * from tb_barang";
+  $query = mysqli_query($conn,$sql);
+  $gambar = "";
+    if ($gambar == "") {
+      $gambar = "default.jpg";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,6 +44,7 @@
           <ul>
             <li><a href="#profile" class="active">Profile</a></li>
             <li><a href="#about">Layanan </a></li>
+            <li><a href="produk.php">Produk Kami </a></li>
             <li><a href="#aboutus">About us</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -181,15 +194,44 @@
           </div>
         </section>
       </main>
+      <h2 class="text-center mb-4">Produk Kami</h2>
+      <?php
+      for ($x = 0 ; $x < 7 ; $x++) {
+        $num = mysqli_fetch_array($query);
+        if($num['gambar'] != "") { 
+              $gambar = $num['gambar']; 
+            }else {
+              $gambar = "default.jpg";
+            }
+            $link_gambar = "assets/images/data/$gambar";
 
-      <div class="card_luar">
+      ?>
+      <span class="card_luar" id="card_luar">
             <div class="card">
-                <div class="card_image"></div>
-                <div class="card_name">Judul</div>
-                <div class="card_price">Harga</div>
+                <div class="card_image">
+                  <img src="<?php echo $link_gambar;?>" class="card_image">
+                </div>
+                <div class="card_name">
+                  <?php 
+                    $nama_barang = $num['nama_barang'];
+                    echo $nama_barang; 
+                  ?>
+                  </div>
+                <div class="card_price">
+                  <?php 
+                    $harga_barang = $num['harga_barang'];
+                    echo "Rp. ".number_format($harga_barang,0,',','.').".00"; 
+                  ?>
+                </div>
             </div>
-        </div>
-        
+        </span>
+
+       <?php
+       }
+       ?> 
+       
+       <a href="produk.php"><button type="button" style="margin-top:10px;margin-left: 87%;" class="btn btn-warning">Selengkapnya</button></a>
+
       <div class="aboutus" id="aboutus">
         <h2>About Us</h2>
         <div class="aboutusmid">

@@ -1,5 +1,4 @@
 <?php
-
 	$server = "localhost";
 	$username = "root";
 	$password = "";
@@ -9,4 +8,5 @@
 	if(!$conn){
         die("gagal koneksi ke database");
     }
+
 ?>

@@ -27,7 +27,7 @@ if(!isset($_SESSION['login'])){
 </head>
 <body>
 <a href="logout.php" class="logout">LOGOUT</a>
-<form method="POST" action="./config/saveAdmin.php">
+<form method="POST" action="./config/saveAdmin.php" enctype="multipart/form-data">
 	<table class="items" id="atas"> 
 		<tr class="no">
 			<td>No Barang</td>
@@ -55,7 +55,7 @@ if(!isset($_SESSION['login'])){
 		<tr>
 			<td>Gambar</td>
 			<td>:</td>
-			<td><input type="file" name="gambar" class="gambar" id="gambar"></td>
+			<td><input type="file" name="gambar" class="gambar" id="gambar" accept="image/*"></td>
 		</tr>
 
 		<tr>

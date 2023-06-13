@@ -7,9 +7,21 @@ $submit_button = $_REQUEST['submit_button'];
 		$nama_barang = $_POST['nama_barang'];
 		$jumlah = $_POST['jumlah'];
 		$harga_barang = $_POST['harga_barang'];
-		$gambar = $_POST['gambar'];
+
+		$gambar = "";
+		$gambar_cek = $_FILES['gambar']['name'];
+		if($gambar_cek != "") {
+			$folder   = "../../assets/images/data"; //tempat di upload
+			$gambar_tmp = $_FILES['gambar']['tmp_name']; //file yg diupload
+			$gambar_name= md5(date("YmdHis")); //nama gambar yg baru
+			$gambar_split = explode(".",$gambar_cek);//memecah nama gambar 
+			$ext  = end($gambar_split);
+			$gambar = $gambar_name.".".$ext;
+			move_uploaded_file($gambar_tmp, "$folder/$gambar");
+		}
+
 		$sql="INSERT into tb_barang(nama_barang,jumlah,harga_barang,gambar) values('$nama_barang','$jumlah','$harga_barang','$gambar')";	
-		$query = mysqli_query($conn,$sql);
+		mysqli_query($conn,$sql);
 
 
     	$sql = "SELECT no_barang FROM tb_barang ORDER BY no_barang ASC";
@@ -27,8 +39,19 @@ $submit_button = $_REQUEST['submit_button'];
 		//end
 	}
 	else if ($submit_button == "delete") {
-    	$sql = "DELETE from tb_barang where no_barang='$no_barang'";
-    	$query = mysqli_query($conn,$sql);
+
+		$qry = mysqli_query($conn,"SELECT * FROM tb_barang WHERE no_barang='$no_barang' ");
+		$row = mysqli_fetch_array($qry);
+		if(!empty($row['gambar']))
+		{
+			unlink("../../assets/images/data/$row[gambar]");//hapus file gambar
+		}
+
+		$sql = "DELETE FROM tb_barang WHERE no_barang='$no_barang' ";
+		mysqli_query($conn,$sql);
+
+    	// $sql = "DELETE from tb_barang where no_barang='$no_barang'";
+    	// $query = mysqli_query($conn,$sql);
     	
     	//comment #1
     	//mengubah data id, contoh 1,2,3,4 dihapus nomor 4, data selanjutnya akan balik menggunakan auto increament 4, sumber : chatGPT
@@ -59,15 +82,41 @@ $submit_button = $_REQUEST['submit_button'];
 		$nama_barang = $_POST['nama_barang'];
 		$jumlah = $_POST['jumlah'];
 		$harga_barang = $_POST['harga_barang'];
-		$gambar = $_POST['gambar'];
-
-		if($gambar != "") {
-    	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang',gambar = '$gambar' where no_barang = '$no_barang'";
-    	$query = mysqli_query($conn,$sql);
-    	}else{
+		//$gambar = $_POST['gambar'];
     	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang' where no_barang = '$no_barang'";
     	$query = mysqli_query($conn,$sql);
-    	}
+
+		// if($gambar != "") {
+  //   	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang',gambar = '$gambar' where no_barang = '$no_barang'";
+  //   	$query = mysqli_query($conn,$sql);
+  //   	}else{
+  //   	$sql = "UPDATE tb_barang set nama_barang = '$nama_barang',jumlah = '$jumlah',harga_barang = '$harga_barang' where no_barang = '$no_barang'";
+  //   	$query = mysqli_query($conn,$sql);
+  //   	}
+
+    	$gambar_cek = $_FILES['gambar']['name'];
+		if($gambar_cek != "") {
+			$folder   = "../../assets/images/data"; //tempat di upload
+			$gambar_tmp = $_FILES['gambar']['tmp_name']; //file yg diupload
+			$gambar_name= md5(date("YmdHis")); //nama gambar yg baru
+			$gambar_split = explode(".",$gambar_cek);//memecah nama gambar 
+			$ext  = end($gambar_split);
+			$gambar = $gambar_name.".".$ext;
+			move_uploaded_file($gambar_tmp, "$folder/$gambar");
+
+			//hapus gambar lama
+			$qry = mysqli_query($conn,"SELECT * FROM tb_barang WHERE no_barang='$no_barang' ");
+			$row = mysqli_fetch_array($qry);
+			if(!empty($row['gambar']))
+			{
+				unlink("../../assets/images/data/$row[gambar]");//hapus file gambar
+			}
+
+			//update gambar baru
+			$sql = "UPDATE tb_barang SET gambar='$gambar' WHERE no_barang='$no_barang' ";
+			mysqli_query($conn,$sql);
+
+		}
 	}
 
 header('location:../adminPage.php');
